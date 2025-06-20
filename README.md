@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Git-to-Text
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Git-to-Text is a web application that allows you to upload a Git repository folder, select relevant file types, and export the contents of those files into a single text file. This consolidated file can be used as input for large language models (LLMs) to analyze or learn about the codebase.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Upload Git Repositories:** Easily upload your local Git project folder.
+- **File Type Selection:** Choose which file types (e.g., `.js`, `.jsx`, `.py`, etc.) to include in the export.
+- **Preview Included Files:** See which files will be included or excluded based on your selection.
+- **Export as Text:** Download a single `.txt` file containing the concatenated contents of all selected files.
+- **LLM Ready:** The exported file is ideal for feeding into LLMs for code analysis, documentation, or learning.
 
-### `npm start`
+## Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Start the App:**
+   - Install dependencies: `npm install`
+   - Run the development server: `npm start`
+2. **Upload a Folder:**
+   - Click the upload area and select your Git project folder.
+3. **Select File Types:**
+   - Choose which file extensions to include (e.g., `.js`, `.jsx`).
+4. **Review Files:**
+   - Preview the list of files that will be included or excluded.
+5. **Export:**
+   - Click the export button to download a single text file with all selected files' content.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Example Use Cases
 
-### `npm test`
+- Preparing code for LLM-based code review or documentation generation.
+- Summarizing large codebases for onboarding or analysis.
+- Creating datasets for machine learning or AI research.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+- **React** (Vite or Create React App)
+- **Tailwind CSS** for styling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Folder Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+public/
+  ...
+src/
+  components/
+    FileSelectionPanel.jsx
+    FolderUpload.jsx
+    Header.jsx
+    OutputPanel.jsx
+  hooks/
+    useFolderProcessor.js
+  lib/
+    constants.js
+  App.jsx
+  index.js
+  index.css
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Development
 
-### `npm run eject`
+1. Clone the repository:
+   ```sh
+   git clone <repo-url>
+   cd git-to-text
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT License
